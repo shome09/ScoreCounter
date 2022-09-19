@@ -30,9 +30,9 @@ for(let y=1;y<4;y++){
 
 function scoreChecker(){
         if (home_score>guest_score){
-            status_el.textContent=("HOME is leading GUEST by " + (home_score-guest_score) + " points");
+            status_el.textContent=("HOME is leading AWAY by " + (home_score-guest_score) + " points");
         }else{
-            status_el.textContent=("GUEST is leading HOME by " + (guest_score-home_score) + " points");
+            status_el.textContent=("AWAY is leading HOME by " + (guest_score-home_score) + " points");
         }
         
 }
@@ -45,7 +45,7 @@ let interval=setInterval(() => {
     else{
         clearInterval(interval);
         if ((guest_score-home_score)>0){
-            timer_el.textContent=("Guest wins by " + (guest_score-home_score)+ " points");
+            timer_el.textContent=("Away wins by " + (guest_score-home_score)+ " points");
         }else{
             timer_el.textContent=("Home wins by " + (home_score-guest_score)+ " points");
         }
